@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>untitled document</title>
+<style type="text/css">
+body{ background:#f6f6f6; font-family:tahoma}
+.container{ width:980px; height:650px; margin:10px auto; border:1px dashed #bd652b; padding:20px 0 20px 40px}
+section{ width:450px; height:220px; float:left; margin:0 40px 60px 0}
+aside{ width:450px; height:120px; float:left; margin:0 40px 60px 0}
+footer{ width:980px; height:100px; float:left}
+.baslikkutu{ width:450px; padding:0 0 10px 0; margin:0 0 15px 0; border-bottom:2px solid #dd9d42; color:#104579; font:bold 19px tahoma}
+section input, aside input{ width:300px; padding:5px; border:1px dashed #a0a0a0; color:#104579; font-size:14px}
+section input:hover{border:1px dashed #bd652b; background:#f0ddbc}
+input.radyo, input.cofirmation{ width:15px}
+textarea{ width:930px; height:65px;padding:5px; border:1px solid #ddd; color:#4b4b4b; font-size:14px }
+button, input.send{ width:100px; padding:10px 25px; margin:0 30px 20px 0;color:#fff; font-size:14px; background:#24588f; cursor:pointer; border:none  }
+tr:hover{ color:#bd652b}
+tr:hover .black{ color:#000}
+input:focus, textarea:focus{ outline:none}
+#military,#otherlanguage,#otherskill{ width:300px;padding:5px; border:1px dashed #a0a0a0; color:#104579; font-size:14px}
+</style>
+
+<script type="text/javascript">
+function militaryservice(value)
+{
+	if(document.getElementById(value).value=="Man")
+	{ document.getElementById("Military").type="text";}
+	else
+	{document.getElementById("Military").type="hidden";}
+	
+	
+}
+
+function openclose(value)
+{
+	if(document.getElementById(deger).type=="text")
+	{ document.getElementById(deger).type="hidden";}
+	else
+	{document.getElementById(deger).type="text";}
+	
+	
+}
+
+function close()
+{
+	document.getElementById("military").value="";
+	document.getElementById("anotherlangueage").value="";
+	document.getElementById("otherinterest").value="";
+	document.getElementById("otherskill").value="";
+	document.getElementById("military").type="hidden";
+	document.getElementById("anotherlanguage").type="hidden";
+	document.getElementById("anotherinterest").type="hidden";
+	document.getElementById("otherskill").type="hidden";
+}
+</script>
+</head>
+<body>
+<form action="" method="get">
+<div class="container">
+<section>
+<div class="headerbox">Personal Information</div>
+<table width="450" height="220">
+  <tr>
+    <td width="145">Name</td>
+    <td width="5">:</td>
+    <td width="300"><input name="" type="text" maxlength="20" placeholder="Please enter your name." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Surname</td>
+    <td>:</td>
+    <td><input name="" type="text" placeholder="Enter yor last name." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Date of Birth</td>
+    <td>:</td>
+    <td><input name="" type="date" required="required" /></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td>:</td>
+    <td><input name="" type="text" pattern="[\(]\d{3}[\)][\s]\d{3}[\s]\d{2}[\s]\d{2}" placeholder="(xxx) xxx xx xx" required="required" /></td>
+  </tr>
+  <tr>
+    <td>Email address</td>
+    <td>:</td>
+    <td><input name="" type="email" placeholder="Enter your e-mail address." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>:</td>
+    <td class="siyah">
+        <input id="man" name="gender" type="radio" value="Man" class="radio" required="required" onclick="militarystatus(this.id)" />Man
+        <input id="woman" name="gender" type="radio" value="Woman" class="radio" required="required" onclick="militarystatus(this.id)" />Woman
+        <input id="askerlik" name="asker" type="hidden" placeholder="Enter the military status." value="" />
+    </td>
+  </tr>
+</table>
+
+</section>
+<section>
+<div class="headerbox">Education Status</div>
+<table width="450" height="220">
+  <tr>
+    <td width="145">Primary school</td>
+    <td width="5">:</td>
+    <td width="300"><input name="" type="text" placeholder="Enter the primary school you are studying." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Middle School</td>
+    <td>:</td>
+    <td><input name="" type="text" placeholder="Enter the secondary school you are reading." required="required" /></td>
+  </tr>
+  <tr>
+    <td>High school</td>
+    <td>:</td>
+    <td><input name="" type="text" placeholder="Enter the high school you are studying." required="required" /></td>
+  </tr>
+  <tr>
+    <td>University</td>
+    <td>:</td>
+    <td><input name="" type="text" placeholder="Enter the university you are studying." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Master</td>
+    <td>:</td>
+    <td><input name="" type="text" placeholder="Please enter the university where you have graduated." required="required" /></td>
+  </tr>
+  <tr>
+    <td>Language</td>
+    <td>:</td>
+    <td class="black"><input class="confirmation" name="" type="checkbox" value="" />English
+    	<input class="confirmation" name="" type="checkbox" value="" />German
+        <input class="oonfirmation" name="" type="checkbox" value="" />Arabian
+        <input class="confirmation" name="" type="checkbox" value="" onclick="openclose('otherlanguage')" />Other
+        <input id="otherlanguage" name="otherlanguage" type="hidden" placeholder="Enter the other language you know." value="" />
+    </td>
+  </tr>
+</table>
+</section>
+<aside>
+<div class="baslikkutu">Areas of interest</div>
+<input class="confirmation" name="" type="checkbox" value="" />Cinema<br />
+<input class="confirmation" name="" type="checkbox" value="" />Theater<br />
+<input class="confirmation" name="" type="checkbox" value="" />Sport<br />
+<input class="confirmation" name="" type="checkbox" value="" />Book<br />
+<input class="cofirmation" name="" type="checkbox" onclick="openclose('otherinterest')" value="" />Other
+<input id="otherinterest" name="otherinterest" type="hidden" placeholder="Enter your other interests." value="" />
+</aside>
+<aside>
+<div class="baslikkutu">Skills</div>
+<input class="confirmation" name="" type="checkbox" value="" />Html<br />
+<input class="confirmation" name="" type="checkbox" value="" />Css<br />
+<input class="confirmation" name="" type="checkbox" value="" />Php<br />
+<input class="confirmation" name="" type="checkbox" value="" />Asp.Net<br />
+<input class="confirmation" name="" type="checkbox" onclick="openclose('otherskill')" value="" />Other
+<input id="otherskill" name="otherskill" type="hidden" placeholder="Enter your other skill." value="" />
+</aside>
+<footer>
+<div class="headerbox">Your thinks</div>
+<textarea required="required"></textarea><br /><br />
+<button>Send</button>
+<input class="send" name="" type="reset" onclick="close()" />
+</footer>
+</div>
+</form>
+</body>
+</html>
